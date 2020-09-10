@@ -1,0 +1,32 @@
+.wrapper{
+    margin-top: 100px;
+}
+
+.employees_wrapper{
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.employees_wrapper label {
+    color: #717171;
+    font-weight: 600;
+}
+
+.employees_wrapper p {
+    margin: 5px 0;
+    box-shadow: -3px -3px 2px 0px #ffffffad, 3px 3px 2px 0px #87acce59;
+    border-radius: 15px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.back {
+    margin-top: 20px;
+    display: inline-block;
+    color: #305463;
+}

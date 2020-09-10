@@ -1,0 +1,14 @@
+.wrapper {
+    margin-top: 100px;
+}
+
+.search_wrapper {
+    margin: 0 auto;
+    max-width: 500px;
+    display: inline-flex;
+}
+
+.text_box {
+    margin-right: 10px;
+    width: 300px;
+}

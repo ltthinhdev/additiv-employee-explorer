@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import { withStyles } from '@material-ui/core/styles';
+
+import Explorer from './scenes/Explorer/Explorer';
+import Overview from './scenes/Overview/Overview';
 import './App.css';
+
+const GlobalCss = withStyles({
+  '@global': {
+    ".MuiOutlinedInput-notchedOutline": {
+      border: 0
+    },
+    ".MuiFormControl-fullWidth": {
+      boxShadow: '-3px -3px 2px 0px #87acce59, 3px 3px 2px 0px #ffffffad',
+      borderRadius: '10px'
+    },
+    ".MuiInputLabel-outlined.MuiInputLabel-shrink": {
+      backgroundColor: '#f1f8ff',
+      padding: '0 4px',
+      color: '#717171'
+    },
+    ".MuiAutocomplete-paper": {
+      backgroundColor: '#f1f8ff',
+    }
+  },
+})(() => null);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalCss />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Explorer} />
+          <Route path="/overview/:name" exact component={Overview} />
+        </Switch>
+      </Router>
     </div>
   );
 }
